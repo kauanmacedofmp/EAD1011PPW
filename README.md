@@ -1,10 +1,5 @@
 # Mundo dos Games
 
-## Como executar
-1. Baixe e extraia os três arquivos na mesma pasta.
-2. Abra o arquivo `index.html` em um navegador.
-3. É necessário ter conexão com a internet para carregar as imagens externas.
-
 ## Respostas para a atividade
 
 **1. Qual é a função do HTML na página desenvolvida?**  
