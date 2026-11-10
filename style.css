@@ -1,0 +1,282 @@
+/* Define cores e medidas reutilizadas em toda a página. */
+:root {
+    --fundo: #090b14;
+    --painel: #121629;
+    --roxo: #9b5cff;
+    --azul: #35c9ff;
+    --texto: #f4f5ff;
+    --texto-suave: #b8bfd6;
+}
+
+/* Remove margens padrão e facilita o cálculo das dimensões dos elementos. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Define a fonte, a cor do texto e o fundo principal da página. */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* Organiza o cabeçalho e mantém os links alinhados. */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: rgba(9, 11, 20, 0.95);
+    border-bottom: 1px solid #252b45;
+}
+
+.logo {
+    color: var(--texto);
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--azul);
+}
+
+nav {
+    display: flex;
+    gap: 26px;
+}
+
+nav a {
+    color: var(--texto-suave);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+/* Muda a cor do link quando o mouse passa sobre ele. */
+nav a:hover {
+    color: var(--azul);
+}
+
+/* Divide a primeira seção em texto e imagem. */
+.hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 45px;
+    padding: 85px 8%;
+    background: radial-gradient(circle at 80% 20%, #24204a 0, transparent 42%);
+}
+
+.etiqueta {
+    color: var(--azul);
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.08;
+    margin-bottom: 22px;
+}
+
+h1 span {
+    color: var(--roxo);
+}
+
+.hero-conteudo > p:not(.etiqueta) {
+    color: var(--texto-suave);
+    margin-bottom: 14px;
+    max-width: 620px;
+}
+
+.hero-imagem img {
+    width: 100%;
+    min-height: 300px;
+    max-height: 430px;
+    object-fit: cover;
+    border-radius: 22px;
+    border: 1px solid #45406d;
+    box-shadow: 0 15px 55px rgba(116, 70, 255, 0.2);
+}
+
+/* Estiliza o botão que leva à lista de jogos. */
+.botao-principal {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 22px;
+    border-radius: 8px;
+    color: white;
+    background: linear-gradient(100deg, var(--roxo), #635bff);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.secao {
+    padding: 75px 8%;
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 2.7rem);
+    margin-bottom: 8px;
+}
+
+.titulo-secao > p:last-child,
+.card-jogo p,
+.curiosidades p {
+    color: var(--texto-suave);
+}
+
+.grade-jogos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.card-jogo {
+    overflow: hidden;
+    background: var(--painel);
+    border: 1px solid #292f4b;
+    border-radius: 16px;
+    transition: transform 0.25s, border-color 0.25s;
+}
+
+/* Cria um pequeno efeito de elevação nos cartões. */
+.card-jogo:hover {
+    transform: translateY(-7px);
+    border-color: var(--roxo);
+}
+
+.card-jogo img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.card-conteudo {
+    padding: 20px;
+}
+
+.categoria {
+    color: var(--azul);
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.card-jogo h3 {
+    margin: 7px 0;
+    font-size: 1.25rem;
+}
+
+.curiosidades {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 45px;
+    align-items: center;
+    padding: 70px 8%;
+    background: #0e1221;
+}
+
+.curiosidades ul {
+    margin: 18px 0 0 22px;
+    color: var(--texto-suave);
+}
+
+.curiosidades li {
+    margin-bottom: 9px;
+}
+
+.recomendacao {
+    padding: 28px;
+    background: var(--painel);
+    border: 1px solid #38345e;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.icone-controle {
+    display: inline-block;
+    color: var(--roxo);
+    font-size: 3rem;
+}
+
+.recomendacao h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.recomendacao button {
+    margin: 20px 0 12px;
+    padding: 13px 20px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--roxo);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+/* Altera a aparência do botão ao passar o mouse. */
+.recomendacao button:hover {
+    background: #7c3fe0;
+    transform: scale(1.04);
+}
+
+.resultado {
+    min-height: 28px;
+    color: var(--azul) !important;
+    font-weight: bold;
+}
+
+footer {
+    padding: 25px 8%;
+    text-align: center;
+    color: var(--texto-suave);
+    border-top: 1px solid #252b45;
+    font-size: 0.9rem;
+}
+
+/* Adapta o site para telas menores, como celulares. */
+@media (max-width: 800px) {
+    .hero,
+    .curiosidades {
+        grid-template-columns: 1fr;
+    }
+
+    .grade-jogos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 540px) {
+    .cabecalho {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 18px;
+    }
+
+    .hero {
+        padding-top: 55px;
+    }
+
+    .grade-jogos {
+        grid-template-columns: 1fr;
+    }
+}

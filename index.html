@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo dos Games</title>
+    <!-- Conecta o arquivo CSS responsável pela aparência da página. -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <a class="logo" href="#inicio">MUNDO<span>GAMES</span></a>
+        <nav aria-label="Navegação principal">
+            <a href="#inicio">Início</a>
+            <a href="#jogos">Jogos</a>
+            <a href="#curiosidades">Curiosidades</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-conteudo">
+                <p class="etiqueta">SEU UNIVERSO DE ENTRETENIMENTO</p>
+                <h1>Entre em um mundo de <span>possibilidades.</span></h1>
+                <p>
+                    Bem-vindo ao Mundo dos Games! Aqui você encontra alguns dos jogos
+                    mais conhecidos, de aventuras em mundos abertos a desafios
+                    criativos e partidas cheias de ação.
+                </p>
+                <p>
+                    Os videogames podem contar histórias, estimular a criatividade
+                    e aproximar pessoas. Explore a seleção abaixo e descubra sua
+                    próxima aventura.
+                </p>
+                <a class="botao-principal" href="#jogos">Explorar jogos</a>
+            </div>
+            <div class="hero-imagem">
+                <!-- Imagem ilustrativa de setup gamer. -->
+                <img
+                    src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=1100&q=85"
+                    alt="Computador e acessórios em um ambiente gamer iluminado">
+            </div>
+        </section>
+
+        <section class="secao" id="jogos">
+            <div class="titulo-secao">
+                <p class="etiqueta">ESCOLHA SUA AVENTURA</p>
+                <h2>Jogos em destaque</h2>
+                <p>Alguns títulos que conquistaram jogadores pelo mundo.</p>
+            </div>
+
+            <div class="grade-jogos">
+                <article class="card-jogo">
+                    <img src="https://images.unsplash.com/photo-1603481546238-487240415921?auto=format&fit=crop&w=900&q=85" alt="Controle de videogame">
+                    <div class="card-conteudo">
+                        <span class="categoria">MUNDO ABERTO</span>
+                        <h3>Grand Theft Auto V</h3>
+                        <p>Explore uma cidade cheia de histórias, missões e possibilidades.</p>
+                    </div>
+                </article>
+
+                <article class="card-jogo">
+                    <img src="https://images.unsplash.com/photo-1627856013091-fed6e4e30025?auto=format&fit=crop&w=900&q=85" alt="Ambiente de jogo com visual de fantasia">
+                    <div class="card-conteudo">
+                        <span class="categoria">CRIATIVIDADE</span>
+                        <h3>Minecraft</h3>
+                        <p>Construa, explore cavernas e crie seu próprio universo em blocos.</p>
+                    </div>
+                </article>
+
+                <article class="card-jogo">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=85" alt="Jogador participando de uma partida de videogame">
+                    <div class="card-conteudo">
+                        <span class="categoria">COMPETIÇÃO</span>
+                        <h3>Fortnite</h3>
+                        <p>Enfrente desafios, monte estratégias e dispute partidas com outros jogadores.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="curiosidades" id="curiosidades">
+            <div>
+                <p class="etiqueta">VOCÊ SABIA?</p>
+                <h2>Curiosidades gamer</h2>
+                <p>Os videogames evoluíram muito: hoje existem jogos com mundos enormes,
+                   trilhas sonoras elaboradas e experiências online compartilhadas.</p>
+                <ul>
+                    <li>Existem jogos de aventura, esporte, estratégia e simulação.</li>
+                    <li>Alguns jogos permitem criar mapas e histórias próprias.</li>
+                    <li>O trabalho em equipe é importante em muitos jogos online.</li>
+                </ul>
+            </div>
+            <aside class="recomendacao">
+                <span class="icone-controle" aria-hidden="true">⌁</span>
+                <h3>Não sabe o que jogar?</h3>
+                <p>Clique no botão e receba uma sugestão aleatória.</p>
+                <button id="botao-sorteio" type="button">Recomendar um jogo</button>
+                <p id="resultado" class="resultado" aria-live="polite">Sua próxima aventura aparece aqui!</p>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Mundo dos Games — Projeto acadêmico de Programação Web.</p>
+    </footer>
+
+    <!-- Carrega as funcionalidades JavaScript da página. -->
+    <script src="script.js"></script>
+</body>
+</html>
